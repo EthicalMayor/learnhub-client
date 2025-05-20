@@ -1,26 +1,26 @@
 import React from 'react'
 import Image from 'next/image'
-import login_pic from "@/app/assets/images/login_pic.png"
 import Google_Icon from "@/app/assets/images/Google_Icon.png"
+import login_banner_new from "@/app/assets/images/login_banner_new.jpeg"
 import Link from 'next/link'
-
 
 type Props = {}
 
 export default function Page({ }: Props) {
   return (
     <div className='h-[100dvh] w-full flex text-black overflow-hidden flex-col md:flex-row'>
-      {/* Left Section - Image (hidden on mobile) */}
-      <div className='hidden md:flex flex-1 items-center justify-center'>
+      <div className='hidden md:flex flex-1 relative items-center justify-center'>
         <Image
-          className='object-contain max-h-[90vh] w-auto'
-          src={login_pic}
+          className='object-contain'
+          src={login_banner_new}
           alt="Login Visual"
         />
+        {/* Black transparent overlay */}
+        <div className='absolute inset-0 bg-black/80'></div>
       </div>
 
       {/* Right Section - Form */}
-      <div className='flex flex-col items-center justify-center gap-10 flex-1 py-8 px-4 sm:px-6 overflow-auto bg-zinc-100/50'>
+      <div className='flex flex-col items-center justify-center gap-10 flex-1 py-8 px-4 sm:px-6 overflow-auto'>
         {/* Header */}
         <div className='flex flex-col gap-4 items-center text-center'>
           <h3 className='text-4xl font-extrabold mt-[40px]'>LearnHub</h3>
@@ -37,7 +37,6 @@ export default function Page({ }: Props) {
           <span className="text-sm text-gray-500 whitespace-nowrap">OR</span>
           <hr className="flex-grow border-t border-gray-300" />
         </div>
-
 
         {/* Input Fields */}
         <div className='flex flex-col w-full items-center gap-8'>

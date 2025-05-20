@@ -1,29 +1,32 @@
 import React from 'react'
 import Image from 'next/image'
-import signup_pic from "@/app/assets/images/signup_pic.png"
 import Google_Icon from "@/app/assets/images/Google_Icon.png"
+import signup_banner_new from "@/app/assets/images/signup_banner_new.jpeg"
 import Link from 'next/link'
-
 
 type Props = {}
 
 export default function Page({ }: Props) {
   return (
     <div className='h-[100dvh] w-full flex text-black overflow-hidden flex-col md:flex-row'>
-      {/* Left Section - Image (hidden on mobile) */}
-      <div className='hidden md:flex flex-1 items-center justify-center'>
+      {/* Left Section - Image with overlay (hidden on mobile) */}
+      <div className='hidden md:flex flex-1 relative items-center justify-center'>
         <Image
-          className='object-contain max-h-[90vh] w-auto'
-          src={signup_pic}
+          className='object-contain'
+          src={signup_banner_new}
           alt="Signup Visual"
         />
+
+        {/* Overlay */}
+        <div className='absolute inset-0 bg-black/80 bg-opacity-50 flex items-center justify-center'>
+        </div>
       </div>
 
       {/* Right Section - Form */}
-      <div className='flex flex-col items-center justify-center gap-10 flex-1 py-8 px-4 sm:px-6 overflow-auto bg-zinc-100/50'>
+      <div className='flex flex-col items-center justify-center gap-10 flex-1 py-8 px-4 sm:px-6 overflow-auto'>
+        <h3 className='font-bold text-[40px] mt-[40px]'>Join Learnhub</h3>
         {/* Header */}
         <div className='flex flex-col gap-4 items-center text-center'>
-          <h3 className='text-4xl font-extrabold mt-[40px]'>Join LearnHub</h3>
           <p className='text-base max-w-[400px] text-gray-600'>
             By continuing, you agree to our User Agreement and acknowledge that you understand the Privacy Policy.
           </p>
@@ -40,7 +43,6 @@ export default function Page({ }: Props) {
           <span className="text-sm text-gray-500 whitespace-nowrap">OR</span>
           <hr className="flex-grow border-t border-gray-300" />
         </div>
-
 
         {/* Input Fields */}
         <div className='flex flex-col w-full items-center gap-5'>
