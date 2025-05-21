@@ -4,7 +4,10 @@ import Image from "next/image";
 import Logo from "@/app/assets/images/Logo.png";
 import landing_up_bg from "@/app/assets/images/landing_up_bg.png";
 import landing_up_bg_mobile from "@/app/assets/images/landing_up_bg_mobile.png";
+import SchoolLogos from "./components/landing/school_logos";
+import WhatWeOffer from "./components/landing/what_we_offer";
 import { useState, useEffect } from "react";
+
 
 export default function Home() {
   const [bgImage, setBgImage] = useState("")
@@ -105,7 +108,15 @@ export default function Home() {
                 </div>
                 </div>
 
-                {/* <p>Next Width</p> */}
+                {/* SCHOOLS LOGOS */}
+                <div className="md:mt-6 mt-3">
+                  <SchoolLogos/>
+                </div>
+
+                {/* WHAT WE OFFER */}
+                <div className="md:mt-12 mt-6">
+                    <WhatWeOffer/>
+                </div>
             </div>
         </div>
       </div>
