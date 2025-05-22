@@ -6,6 +6,7 @@ import landing_up_bg from "@/app/assets/images/landing_up_bg.png";
 import landing_up_bg_mobile from "@/app/assets/images/landing_up_bg_mobile.png";
 import SchoolLogos from "./components/landing/school_logos";
 import WhatWeOffer from "./components/landing/what_we_offer";
+import Footer from "./components/landing/footer";
 import { useState, useEffect } from "react";
 
 
@@ -21,8 +22,8 @@ export default function Home() {
         window.addEventListener('resize', bgImageFunc)
     }, [])
   return (
-    <div className="w-full px-[1.5rem] md:px-[3rem] md:py-[1.5rem] py-[0.8rem]">
-      <div>
+    <div className="w-full  ">
+      <div className="px-[1.5rem] md:px-[3rem] md:py-[1.5rem] py-[0.8rem]">
         <div className="flex flex-col gap-y-4 ">
             <div className="flex justify-between items-center">
                 {/* Logo */}
@@ -31,12 +32,12 @@ export default function Home() {
                 </div>
 
                 {/* Right */}
-                <div className="flex gap-x-9 items-center">
-                <p className="text-black md:text-[14px] text-[12px]">Log In</p>
+                <div className="flex md:gap-x-9 gap-x-2 items-center">
+                    <p className="text-black md:text-[14px] text-[12px]">Log In</p>
 
-                <button className="px-[2rem] text-[10px] md:px-[4rem] md:text-[16px] py-1 md:py-2 bg-gradient-to-r from-[#0E76FD] from-0% to-[#9747FF] to-65% text-white rounded-full font-medium hover:from-[#0C63DB] hover:to-[#7D3FE5] transition duration-300">
-                    Get LearnHub Free
-                </button>
+                    <button className="px-[2rem] text-[10px] md:px-[4rem] md:text-[16px] py-1 md:py-2 bg-gradient-to-r from-[#0E76FD] from-0% to-[#9747FF] to-65% text-white rounded-full font-medium hover:from-[#0C63DB] hover:to-[#7D3FE5] transition duration-300">
+                        Get LearnHub Free
+                    </button>
                 </div>
             </div>
 
@@ -117,9 +118,16 @@ export default function Home() {
                 <div className="md:mt-12 mt-6">
                     <WhatWeOffer/>
                 </div>
+
+                
             </div>
         </div>
       </div>
+
+        {/* FOOTER */}
+        <div className="md:mt-[20rem] mt-[13rem]">
+            <Footer/>
+        </div>
     </div>
   );
 }
