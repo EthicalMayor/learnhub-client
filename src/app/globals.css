@@ -35,3 +35,25 @@ body {
 button{
   cursor: pointer;
 }
+
+/* Customize Scroll Bar */
+/* Custom scroll class */
+.custom_scroll::-webkit-scrollbar {
+  width: 2px;
+}
+
+.custom_scroll::-webkit-scrollbar-thumb {
+  background-color: #9096a0; /* Tailwind gray-700 */
+  border-radius: 2px;
+}
+
+.custom_scroll::-webkit-scrollbar-track {
+  background: #edf2f7; /* Tailwind gray-100 */
+}
+
+/* Firefox compatibility */
+.custom_scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #9096a0 #edf2f7;
+}
+
