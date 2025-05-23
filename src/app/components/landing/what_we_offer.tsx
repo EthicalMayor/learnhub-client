@@ -77,11 +77,11 @@ export default function WhatWeOffer(){
             <div className="flex justify-center">
                 <div className="flex flex-col gap-y-2 w-full justify-center items-center">
                     <p className="text-[16px] text-black font-semibold text-center">Ready to connect?</p>
-                    <Link href="/signup">
-                        <button className="  sm:text-[14px] sm:px-[3.5rem] md:w-[15rem] w-full md:text-[16px] py-[0.4rem] md:py-[0.6rem] bg-gradient-to-r from-[#0E76FD] from-0% to-[#9747FF] to-65% text-white rounded-full font-medium hover:from-[#0C63DB] hover:to-[#7D3FE5] transition duration-300">
+                    
+                        <Link href="/signup" className=" text-center sm:text-[14px] sm:px-[3.5rem] md:w-[15rem] w-full md:text-[16px] py-[0.4rem] md:py-[0.6rem] bg-gradient-to-r from-[#0E76FD] from-0% to-[#9747FF] to-65% text-white rounded-full font-medium hover:from-[#0C63DB] hover:to-[#7D3FE5] transition duration-300">
                             Sign up
-                        </button>
-                    </Link>
+                        </Link>
+                   
                 </div>
             </div>
         </div>
