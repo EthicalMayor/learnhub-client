@@ -4,9 +4,9 @@ import Google_Icon from "@/app/assets/images/Google_Icon.png"
 import signup_banner_new from "@/app/assets/images/signup_banner_new.jpeg"
 import Link from 'next/link'
 
-type Props = {}
+// type Props = {}
 
-export default function Page({ }: Props) {
+export default function Page() {
   return (
     <div className='h-[100dvh] w-full flex text-black overflow-hidden flex-col md:flex-row'>
       {/* Left Section - Image with overlay (hidden on mobile) */}

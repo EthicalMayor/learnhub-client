@@ -66,7 +66,7 @@ export default function WhatWeOffer(){
                             <p className="text-[12px] px-2 bg-[#FFF71B] rounded-full">Coming soon</p>
                         </div>
                         <div className="text-[#616B78] lg:text-[16px] md:text-[12px] text-[10px] font-medium">
-                            <p>Your network doesn't stop at your school, connect, create</p>
+                            <p>Your network doesn&apos;t stop at your school, connect, create</p>
                             <p className="-mt-1">and collab from campuses everywhere</p>
                         </div>
                     </div>
