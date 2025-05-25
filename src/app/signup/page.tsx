@@ -7,9 +7,9 @@ import { Eye, EyeOff } from "lucide-react";
 
 type Props = {};
 
-// dummy push
 
-export default function Page({ }: Props) {
+
+export default function Page({ }) {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
