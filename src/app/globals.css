@@ -26,6 +26,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "InstrumentSans_Regular";
+  src: url("/fonts/InstrumentSans/InstrumentSans-Regular.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   background: #FAFBFB;
   color: var(--foreground);
@@ -34,6 +41,10 @@ body {
 
 button{
   cursor: pointer;
+}
+
+.InstrumentSans_Regular{
+  font-family: "InstrumentSans_Regular", "sf_pro_regular", Arial, Helvetica, sans-serif;
 }
 
 /* Customize Scroll Bar */
@@ -57,3 +68,15 @@ button{
   scrollbar-color: #9096a0 #edf2f7;
 }
 
+input:focus {
+  outline: none;
+  box-shadow: 0 0 #0000;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+input[type="date"] {
+  appearance: none;
+}
