@@ -5,12 +5,9 @@ import login_banner_new from "@/app/assets/images/login_banner_new.jpeg";
 import Link from "next/link";
 import { Eye, EyeOff } from "lucide-react";
 
-type Props = {};
-
-// dummy push
-
-export default function Page({ }: Props) {
+export default function Page({ }) {
   const [showPassword, setShowPassword] = useState(false);
+
 
   return (
     <div className="min-h-screen w-full flex flex-col md:flex-row text-black bg-white">
