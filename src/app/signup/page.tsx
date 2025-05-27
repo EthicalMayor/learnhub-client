@@ -7,7 +7,8 @@ import { Eye, EyeOff } from "lucide-react";
 
 type Props = {};
 
-export default function Page() {
+export default function Page({ }) {
+
   const [showPassword, setShowPassword] = useState(false);
 
   return (

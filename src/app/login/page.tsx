@@ -5,8 +5,8 @@ import login_banner_new from "@/app/assets/images/login_banner_new.jpeg";
 import Link from "next/link";
 import { Eye, EyeOff } from "lucide-react";
 
+export default function Page({ }) {
 
-export default function Page({ }: Props) {
   const [showPassword, setShowPassword] = useState(false);
 
 
