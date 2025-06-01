@@ -19,6 +19,7 @@
   }
 }
 
+/* ADDING FONTS */
 @font-face {
   font-family: "sf_pro_regular";
   src: url("/fonts/sf_pro/SFPRODISPLAYREGULAR.OTF") format("opentype");
@@ -33,6 +34,7 @@
   font-style: normal;
 }
 
+/* STYLING ELEMENTS */
 body {
   background: #FAFBFB;
   color: var(--foreground);
@@ -43,6 +45,26 @@ button{
   cursor: pointer;
 }
 
+input:focus {
+  outline: none;
+  box-shadow: 0 0 #0000;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+input[type="date"] {
+  appearance: none;
+}
+
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 #0000;
+}
+
+
+/* OTHER STYLING */
 .InstrumentSans_Regular{
   font-family: "InstrumentSans_Regular", "sf_pro_regular", Arial, Helvetica, sans-serif;
 }
@@ -68,15 +90,3 @@ button{
   scrollbar-color: #9096a0 #edf2f7;
 }
 
-input:focus {
-  outline: none;
-  box-shadow: 0 0 #0000;
-}
-
-input[type="date"]::-webkit-calendar-picker-indicator {
-  display: none;
-  -webkit-appearance: none;
-}
-input[type="date"] {
-  appearance: none;
-}
