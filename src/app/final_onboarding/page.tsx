@@ -3,12 +3,12 @@
 import { useRef, useState } from "react";
 import { Check } from "lucide-react";
 import final_onboarding from "@/app/assets/images/final_onboarding.png";
-import setup_profile_bg from "@/app/assets/images/setup_profile_bg.png";
-import select_camera_icon from "@/app/assets/images/select_camera_icon.png";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 export default function Final(props: any) {
     const showInterest = props.showInterest;
+    const router = useRouter()
 
     return (
         <div 
@@ -34,7 +34,8 @@ export default function Final(props: any) {
                 <div className="w-full flex justify-between gap-x-4 mt-4">
                     <button
                         className="w-full font-medium border border-solid border-[#002BFF] rounded-xl py-2"
-                    >
+                        onClick={() => {router.push('/onboarding')}}
+                    >   
                         Edit Profile
                     </button>
 

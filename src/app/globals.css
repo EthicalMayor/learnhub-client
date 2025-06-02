@@ -1,5 +1,21 @@
 @import "tailwindcss";
 
+/* For Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 5s linear infinite alternate;
+}
+
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
