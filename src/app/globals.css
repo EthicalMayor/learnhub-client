@@ -6,13 +6,17 @@
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-80%);
   }
 }
 
 .animate-scroll {
-  animation: scroll 5s linear infinite alternate;
+  animation: scroll 20s linear infinite alternate;
 }
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
 
 
 
@@ -106,3 +110,7 @@ textarea:focus {
   scrollbar-color: #9096a0 #edf2f7;
 }
 
+
+.offer_div {
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+}

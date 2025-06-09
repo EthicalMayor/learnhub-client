@@ -6,13 +6,17 @@ import landing_up_bg from "@/app/assets/images/landing_up_bg.png";
 import landing_up_bg_mobile from "@/app/assets/images/landing_up_bg_mobile.png";
 import SchoolLogos from "./components/landing/school_logos";
 import WhatWeOffer from "./components/landing/what_we_offer";
+import UnlockYourPotential from "./components/landing/unlock_your_potential";
 import Footer from "./components/landing/footer";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 
 export default function Home() {
   const [bgImage, setBgImage] = useState("")
+  
+  const router = useRouter()
 
     useEffect (() => {
         const bgImageFunc = () => {
@@ -34,10 +38,11 @@ export default function Home() {
 
                 {/* Right */}
                 <div className="flex md:gap-x-9 gap-x-2 items-center">
-                    <Link href="/login" className="text-black md:text-[14px] text-[12px]">Log In</Link>
-
-                    <button className="px-[1rem] text-[10px] md:px-[4rem] md:text-[16px] py-1 md:py-2 bg-gradient-to-r from-[#0E76FD] from-0% to-[#9747FF] to-65% text-white rounded-full font-medium hover:from-[#0C63DB] hover:to-[#7D3FE5] transition duration-300">
-                        Get LearnHub Free
+                    <button 
+                    className="px-[1rem] text-[10px] md:px-[4rem] md:text-[16px] py-1 md:py-2 bg-gradient-to-r from-[#0E76FD] from-0% to-[#9747FF] to-65% text-white rounded-full font-medium hover:from-[#0C63DB] hover:to-[#7D3FE5] transition duration-300"
+                    onClick={() => router.push('/signup')}
+                    >
+                        Join for Free now
                     </button>
                 </div>
             </div>
@@ -119,12 +124,31 @@ export default function Home() {
                   <SchoolLogos/>
                 </div>
 
+                {/* Become an ambassador */}
+                <section className="flex justify-center my-3">
+                    
+                        <article className="flex flex-col text-center">
+                            <p className="text-[22px] md:text-[35px] font-bold">Join 20+ Universities </p>
+                            <p className="text-[12px] md:text-[16px] font-medium">Help us launch in your University</p>
+                            <button 
+                                className="mt-4 px-[3rem] text-[15px] md:px-[8rem] md:text-[20px] py-1 md:py-2 bg-gradient-to-r from-[#0E76FD] from-0% to-[#9747FF] to-65% text-white rounded-full font-medium hover:from-[#0C63DB] hover:to-[#7D3FE5] transition duration-300"
+                                onClick={() => router.push('/signup')}
+                                >
+                                    Become a LearnHub campus ambassador
+                            </button>
+                        </article>
+                    
+                </section>
+
                 {/* WHAT WE OFFER */}
-                <div className="md:mt-12 mt-6 md:mb-[20rem] mb-[13rem]">
+                <div className="md:mt-12 mt-6">
                     <WhatWeOffer/>
                 </div>
 
-                
+                {/* Unlock yor Potential */}
+                <div className="md:mt-12 mt-6 md:mb-[20rem] mb-[13rem]">
+                    <UnlockYourPotential/>
+                </div>
             </div>
         </div>
       </div>
