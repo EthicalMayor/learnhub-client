@@ -1,17 +1,16 @@
 "use client"
 
-import { useState } from "react";
-import { Check } from "lucide-react";
 import vibe from "@/app/assets/images/institution.png"
 import back_icon from "@/app/assets/images/back_icon.png"
 import skip_icon from "@/app/assets/images/skip_icon.png"
 import Image from "next/image";
 
-export default function Institution(props: any) {
-    const showInterest = props.showInterest
-    const showVibe = props.showVibe
-    
+type InstitutionProps = {
+    showInterest: () => void;
+    showVibe: () => void;
+}
 
+export default function Institution({showInterest, showVibe}: InstitutionProps) {
     return (
         <div className="min-h-screen px-5 md:px-0 flex flex-col md:flex-row w-full justify-between bg-[#FAFBFB]">
             <header className="flex md:hidden justify-between items-center my-7 w-full">

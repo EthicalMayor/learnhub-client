@@ -1,13 +1,14 @@
 "use client"
 
-import { useRef, useState } from "react";
-import { Check } from "lucide-react";
 import final_onboarding from "@/app/assets/images/final_onboarding.png";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 
-export default function Final(props: any) {
-    const showInterest = props.showInterest;
+type FinalProps = {
+    showInterest: () => void;
+}
+
+export default function Final({showInterest}: FinalProps) {
     const router = useRouter()
 
     return (

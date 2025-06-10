@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react";
-import { Check } from "lucide-react";
 import vibe from "@/app/assets/images/interest.png"
 import search_icon from "@/app/assets/images/search_icon.png"
 import back_icon from "@/app/assets/images/back_icon.png"
@@ -15,9 +14,12 @@ const goalsList = [
   "Music", "Engineering"
 ];
 
-export default function Interest(props: any) {
-    const showSetupProfile = props.showSetupProfile;
-    const showInstitution = props.showInstitution
+type InterestProps = {
+    showSetupProfile: () => void;
+    showInstitution: () => void;
+}
+
+export default function Interest({showSetupProfile, showInstitution}: InterestProps) {
     const [selectedGoals, setSelectedGoals] = useState<string[]>([]);
     const [searchTerm, setSearchTerm] = useState<string>("");
 

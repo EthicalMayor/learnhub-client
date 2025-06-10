@@ -1,7 +1,6 @@
 "use client"
 
 import { useRef, useState } from "react";
-import { Check } from "lucide-react";
 import setup_profile_pic from "@/app/assets/images/setup_profile_pic.png";
 import setup_profile_bg from "@/app/assets/images/setup_profile_bg.png";
 import select_camera_icon from "@/app/assets/images/select_camera_icon.png";
@@ -10,9 +9,11 @@ import skip_icon from "@/app/assets/images/skip_icon.png"
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 
-export default function SetupProfile(props: any) {
-    const createAccount = props.createAccount;
-    const showInterest = props.showInterest
+type SetupProfileProps = {
+    showInterest: () => void;
+}
+
+export default function SetupProfile({showInterest}: SetupProfileProps) {
     const fileInputRef = useRef<HTMLInputElement>(null);
     const [previewImage, setPreviewImage] = useState<string>(setup_profile_pic.src);
 

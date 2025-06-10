@@ -1,13 +1,15 @@
 "use client"; // Required if using in app directory (Next.js 13+)
 
-import Image from "next/image";
 import onboardng_welcome_bg from "@/app/assets/images/onboardng_welcome_bg.png";
 import React, { useRef, useState  } from "react";
 import 'react-phone-input-2/lib/style.css';
 import PhoneInput from 'react-phone-input-2';
 
-export default function OnbordingWelcome(props: any) {
-    const showVibe = props.showVibe
+type OnbordingWelcomeProps = {
+    showVibe: () => void;
+}
+
+export default function OnbordingWelcome({showVibe}: OnbordingWelcomeProps) {
     const [phone, setPhone] = useState('');
     const inputRef = useRef<HTMLInputElement>(null);
 

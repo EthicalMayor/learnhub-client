@@ -3,7 +3,7 @@ import explore_connection from "@/app/assets/images/explore_connection.png"
 import find_your_tribe from "@/app/assets/images/find_your_tribe.png"
 import inter_campus_connection from "@/app/assets/images/inter_campus_connection.png"
 import Image from "next/image"
-import Link from "next/link"
+
 
 export default function WhatWeOffer(){
     return(

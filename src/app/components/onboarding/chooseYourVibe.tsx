@@ -15,9 +15,12 @@ const goalsList = [
   "Just vibes and gist",
 ];
 
-export default function ChooseYourVibe(props: any) {
-    const showInstitution = props.showInstitution
-    const showWelcome = props.showWelcome
+type ChooseYourVibeProps = {
+    showInstitution: () => void;
+    showWelcome: () => void;
+}
+
+export default function ChooseYourVibe({showInstitution, showWelcome}: ChooseYourVibeProps) {
     const [selectedGoals, setSelectedGoals] = useState<string[]>([
         // "Ace my course",
         // "Land an internship",
