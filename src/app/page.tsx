@@ -50,7 +50,7 @@ export default function Home() {
             {/* After Nav Bar */}
             <div className="w-full text-black">
                 <div
-                className="bg-cover bg-no-repeat bg-center w-full aspect-[16/9] rounded-2xl sm:aspect-[4/3] lg:aspect-[16/9]"
+                className="bg-cover bg-no-repeat bg-center w-full aspect-[16/9] h-fit rounded-2xl sm:aspect-[4/3] lg:aspect-[16/9]"
                 style={{
                     backgroundImage: `url(${bgImage})`,
                 }}
@@ -61,8 +61,8 @@ export default function Home() {
                             {/* DISPLAY THIS ONLY IN DESKTOP VIEW */}
                             <div className="hidden md:flex flex-col gap-y-2 ">
                                 <div className="text-[#FFFFFF] text-[14px] md:text-[30px] lg:text-[40px] md:text-start text-center">
-                                    <p>Study Smarter, Together</p>
-                                    <p>Connect with Peers Who Get It</p>
+                                    <p>Study Smarter, Together </p>
+                                    <p className="mt-1">Connect with Peers Who Get It</p>
                                 </div>
                                 <div className="text-[#D9D6DE] md:text-[15px] lg:text-[20px] md:text-start text-center">
                                     <p>Join LearnHub to meet students like you</p>
@@ -72,12 +72,19 @@ export default function Home() {
                             </div>
 
                             {/* DISPLAY THIS WHEN IN MOBILE VIEW */}
-                            <div className="text-center flex flex-col sm:gap-y-3 gap-y-1 md:hidden">
-                                <p className="text-white sm:text-[30px] text-[20px] font-bold">Study. Connect. Thrive</p>
-                                <div className="text-[#F3F3F3] text-center sm:text-[15px] text-[10px] ">
-                                    <p>From study help to real connection.</p>
-                                    <p>LearnHub brings students like you</p>
-                                    <p>together.</p>
+                            <div className="flex justify-center">
+                                <div className="text-center flex flex-col sm:gap-y-3 gap-y-1 md:hidden w-[70%]">
+                                    <p className="text-white sm:text-[30px] text-[12px] font-bold text-center">
+                                        Study Smarter, Together 
+                                        Connect with Peers Who Get It
+                                    </p>
+                                    <div className="text-[#F3F3F3] text-center sm:text-[15px] text-[9px] ">
+                                        <p>
+                                            Join LearnHub to meet students like you
+                                            whether you need study group,
+                                            motivation, or just better notes
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
 
@@ -95,20 +102,20 @@ export default function Home() {
                         <div className="flex md:justify-start justify-center ">
                             <div className="flex sm:mt-4 md:mt-8">
                                 {/* left */}
-                                <div className="flex text-white items-center gap-x-2 md:pr-8 md:mr-8 pr-4 mr-4 border-r-2 border-solid border-[#606060]">
+                                <div className="flex text-white items-center gap-x-2 md:pr-8 md:mr-8  pr-4 mr-4 border-r-2 border-solid border-[#606060]">
                                     <p className="lg:text-[49px] md:text-[39px] sm:text-[30px] text-[25px]">+</p>
                                     <p className="lg:text-[49px] md:text-[39px] sm:text-[30px] text-[25px]">60</p>
-                                    <div className="flex flex-col lg:text-[16px] md:text-[12px] text-[11px]">
+                                    <div className="flex flex-col lg:text-[16px] md:text-[12px] text-[8px]">
                                         <p>Universities</p>
                                         <p className="-mt-1">across Africa</p>
                                     </div>
                                 </div>
 
                                 {/* right */}
-                                <div className="flex text-white items-center gap-x-2">
+                                <div className="flex text-white items-center gap-x-2 ">
                                     <p className="lg:text-[49px] md:text-[39px] sm:text-[30px] text-[25px]">+</p>
                                     <p className="lg:text-[49px] md:text-[39px] sm:text-[30px] text-[25px]">100</p>
-                                    <div className="flex flex-col lg:text-[16px] md:text-[12px] text-[11px]">
+                                    <div className="flex flex-col lg:text-[16px] md:text-[12px] text-[8px]">
                                         <p>Community</p>
                                         <p className="-mt-1">Groups</p>
                                     </div>
@@ -146,7 +153,7 @@ export default function Home() {
                 </div>
 
                 {/* Unlock yor Potential */}
-                <div className="md:mt-12 mt-6 md:mb-[20rem] mb-[13rem]">
+                <div className="md:mt-12 mt-6 md:mb-[20rem] mb-[7rem]">
                     <UnlockYourPotential/>
                 </div>
             </div>

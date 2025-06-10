@@ -87,9 +87,9 @@ export default function ChooseYourVibe(props: any) {
                     })}
                     </div>
 
-                    <div className="w-full flex justify-between gap-x-4 mt-[6rem]">
+                    <div className="w-full flex justify-center md:justify-between gap-x-4 mt-[6rem]">
                         <button 
-                        className="w-full font-medium border border-solid border-[#5281BE] text-[#1F2D70] rounded-xl py-2"
+                        className="w-full font-medium border border-solid border-[#5281BE] text-[#1F2D70] rounded-xl py-2 hidden md:block"
                         onClick={showInstitution}
                         >
                             Skip for now
@@ -97,7 +97,7 @@ export default function ChooseYourVibe(props: any) {
                         
                         
                         <button 
-                            className="w-full font-medium bg-[#082AD4] text-white rounded-xl py-2"
+                            className=" w-[60%] md:w-full  font-medium bg-[#082AD4] text-white rounded-xl py-2"
                             onClick={showInstitution}
                         >
                             Next

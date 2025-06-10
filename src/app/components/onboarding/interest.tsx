@@ -103,16 +103,16 @@ export default function Interest(props: any) {
                     </section>
                 </div>
                 {/* Navigation Buttons */}
-                <div className="w-full flex justify-between gap-x-4 ">
+                <div className="w-full flex justify-center md:justify-between gap-x-4 ">
                     <button
-                        className="w-full font-medium border border-solid border-[#5281BE] text-[#1F2D70] rounded-xl py-2"
+                        className="w-full font-medium border border-solid border-[#5281BE] text-[#1F2D70] rounded-xl py-2 hidden md:block"
                         onClick={showSetupProfile}
                     >
                         Skip for now
                     </button>
 
                     <button
-                        className="w-full font-medium bg-[#082AD4] text-white rounded-xl py-2"
+                        className="w-[60%] md:w-full font-medium bg-[#082AD4] text-white rounded-xl py-2"
                         onClick={showSetupProfile}
                     >
                         Next
