@@ -4,11 +4,8 @@ import final_onboarding from "@/app/assets/images/final_onboarding.png";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 
-type FinalProps = {
-    showInterest: () => void;
-}
 
-export default function Final({showInterest}: FinalProps) {
+export default function Page() {
     const router = useRouter()
 
     return (
@@ -42,7 +39,6 @@ export default function Final({showInterest}: FinalProps) {
 
                     <button
                         className="w-full font-medium bg-[#082AD4] text-white rounded-xl py-2"
-                        onClick={showInterest}
                     >
                         Create My Account
                     </button>
