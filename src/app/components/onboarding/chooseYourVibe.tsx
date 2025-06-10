@@ -36,6 +36,7 @@ export default function ChooseYourVibe({showInstitution, showWelcome}: ChooseYou
 
     return (
         <div className="min-h-screen px-5 md:px-0 flex flex-col md:flex-row w-full items-center justify-between bg-[#FAFBFB]">
+            {/* For Mobile */}
             <header className="flex md:hidden justify-between items-center my-7 w-full">
                 <button 
                     className="w-fit flex gap-x-2 font-medium text-white rounded-lg h-fit py-2"
@@ -44,7 +45,7 @@ export default function ChooseYourVibe({showInstitution, showWelcome}: ChooseYou
                     <Image src={back_icon} alt="back_icon" className="w-3 "/>
                     <p className="text-black">Back</p>
                 </button>
-                <h1 className="text-xl font-semibold text-black" style={{fontFamily: "sans-serif"}}>Choose Your Vibe</h1>
+                <h1 className="text-lg font-semibold text-black" style={{fontFamily: "sans-serif"}}>Choose Your Vibe</h1>
                 <button 
                     className="w-fit flex gap-x-2 font-medium text-white rounded-lg h-fit py-2"
                     onClick={showInstitution}
@@ -53,6 +54,7 @@ export default function ChooseYourVibe({showInstitution, showWelcome}: ChooseYou
                     <Image src={skip_icon} alt="back_icon" className="w-3"/>
                 </button>
             </header>
+            {/* Continue View */}
             <div className="w-full flex items-center justify-center">
                 <Image src={vibe} alt="vibe" className="w-[20rem] "/>
             </div>

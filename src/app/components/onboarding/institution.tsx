@@ -13,6 +13,7 @@ type InstitutionProps = {
 export default function Institution({showInterest, showVibe}: InstitutionProps) {
     return (
         <div className="min-h-screen px-5 md:px-0 flex flex-col md:flex-row w-full justify-between bg-[#FAFBFB]">
+            {/* For Mobile */}
             <header className="flex md:hidden justify-between items-center my-7 w-full">
                 <button 
                     className="w-fit flex gap-x-2 font-medium text-white rounded-lg h-fit py-2"
@@ -21,7 +22,7 @@ export default function Institution({showInterest, showVibe}: InstitutionProps) 
                     <Image src={back_icon} alt="back_icon" className="w-3 "/>
                     <p className="text-black">Back</p>
                 </button>
-                <h1 className="text-xl font-semibold text-black" style={{fontFamily: "sans-serif"}}>Institution & Course</h1>
+                <h1 className="text-lg font-semibold text-black" style={{fontFamily: "sans-serif"}}>Institution & Course</h1>
                 <button 
                     className="w-fit flex gap-x-2 font-medium text-white rounded-lg h-fit py-2"
                     onClick={showInterest}
@@ -30,6 +31,7 @@ export default function Institution({showInterest, showVibe}: InstitutionProps) 
                     <Image src={skip_icon} alt="back_icon" className="w-3"/>
                 </button>
             </header>
+            {/* Continue View */}
             <div className="w-full flex items-center justify-center">
                 <Image src={vibe} alt="vibe" className="w-[20rem] "/>
             </div>

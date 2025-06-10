@@ -42,6 +42,7 @@ export default function SetupProfile({showInterest}: SetupProfileProps) {
         >
             <article className="flex flex-col justify-between md:w-[30rem]">
                 <section className="space-y-6 w-full">
+                    {/* For Mobile */}
                     <header className="flex md:hidden justify-between items-center my-7 w-full">
                         <button 
                             className="w-fit flex gap-x-2 font-medium text-white rounded-lg h-fit py-2"
@@ -50,7 +51,7 @@ export default function SetupProfile({showInterest}: SetupProfileProps) {
                             <Image src={back_icon} alt="back_icon" className="w-3 "/>
                             <p className="text-black">Back</p>
                         </button>
-                        <h1 className="text-xl font-semibold text-black" style={{fontFamily: "sans-serif"}}>Set up Profile</h1>
+                        <h1 className="text-lg font-semibold text-black" style={{fontFamily: "sans-serif"}}>Set up Profile</h1>
                         <button 
                             className="w-fit flex gap-x-2 font-medium text-white rounded-lg h-fit py-2"
                             onClick={() => router.push('/final_onboarding')}
@@ -59,7 +60,7 @@ export default function SetupProfile({showInterest}: SetupProfileProps) {
                             <Image src={skip_icon} alt="back_icon" className="w-3"/>
                         </button>
                     </header>
-
+                    {/* Continue View */}
                     <header className="hidden md:flex justify-between items-center my-7">
                             <button 
                                 className="w-fit px-5 font-medium bg-[#082AD4] text-white rounded-lg h-fit py-2"
