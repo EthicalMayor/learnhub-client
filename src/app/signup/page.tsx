@@ -5,7 +5,6 @@ import signup_banner_new from "@/app/assets/images/signup_banner_new.jpeg";
 import Link from "next/link";
 import { Eye, EyeOff } from "lucide-react";
 
-type Props = {};
 
 export default function Page({ }) {
 
