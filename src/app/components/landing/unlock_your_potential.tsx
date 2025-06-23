@@ -17,13 +17,13 @@ export default function UnlockYourPotential(){
                 
             </div>
 
-            <div className="flex flex-wrap justify-between md:gap-y-20 gap-y-10 flex-row ">
+            <div className="flex flex-col md:flex-row flex-wrap justify-between md:gap-y-20 gap-y-10 ">
                 {/* Campus Rooms */}
-                <div className="flex md:gap-x-5 gap-x-2 justify-between items-center  w-[49%] md:w-[46%]  md:pr-4 pr-2  bg-[#E3EFFE]">
+                <div className="flex md:gap-x-5 gap-x-4 offer_div justify-between items-center  w-[100%] md:w-[46%]  md:pr-4 pr-2  bg-[#E3EFFE]">
                     <Image src={professional_profile} alt="professional_profile" className=" h-[4rem] md:h-[9rem] w-fit"/>
                     <div className="flex flex-col gap-1">
-                        <p className="lg:text-[20px] md:text-[15px] text-[7px] font-semibold text-black">Build Your Professional Profile</p>
-                        <div className="text-[#616B78] lg:text-[15px] md:text-[12px] text-[6px] font-medium">
+                        <p className="lg:text-[20px] md:text-[15px] text-[12px] font-semibold text-black">Build Your Professional Profile</p>
+                        <div className="text-[#616B78] lg:text-[15px] md:text-[12px] text-[9px] font-medium">
                             <p>
                                 Showcase your skills, projects and achievements 
                                 to attract collaborators and potential employers.
@@ -34,10 +34,10 @@ export default function UnlockYourPotential(){
                 </div>
 
                 {/* Explore Connections */}
-                <div className="flex md:gap-x-5 gap-x-2 justify-between items-center  w-[49%] md:w-[46%]  md:pl-4 pl-2  bg-[#FFF4E2]">
+                <div className="flex md:gap-x-5 gap-x-4 offer_div justify-between items-center  w-[100%] md:w-[46%]  pl-8  bg-[#FFF4E2]">
                     <div className="flex flex-col gap-1">
-                        <p className="lg:text-[20px] md:text-[15px] text-[7px] font-semibold text-black">Collaborate on Projects</p>
-                        <div className="text-[#616B78] lg:text-[15px] md:text-[12px] text-[6px] font-medium">
+                        <p className="lg:text-[20px] md:text-[15px] text-[12px] font-semibold text-black">Collaborate on Projects</p>
+                        <div className="text-[#616B78] lg:text-[15px] md:text-[12px] text-[9px] font-medium">
                             <p>
                                 Find and connect with students who share your
                                 interests and work together on innovative
@@ -50,11 +50,11 @@ export default function UnlockYourPotential(){
                 </div>
 
                 {/* Find Your Tribe */}
-                <div className="flex md:gap-x-5 gap-x-2 justify-between items-center  w-[49%] md:w-[46%]  md:pr-4 pr-2  bg-[#FBEAFF]">
+                <div className="flex md:gap-x-5 gap-x-4 offer_div justify-between items-center  w-[100%] md:w-[46%]  md:pr-4 pr-2  bg-[#FBEAFF]">
                     <Image src={event} alt="event" className=" h-[4rem] md:h-[9rem] w-fit bg-[#FAFAFA]"/>
                     <div className="flex flex-col gap-1">
-                        <p className="lg:text-[20px] md:text-[15px] text-[7px] font-semibold text-black">Attend Networking Events</p>
-                        <div className="text-[#616B78] lg:text-[15px] md:text-[12px] text-[6px] font-medium">
+                        <p className="lg:text-[20px] md:text-[15px] text-[12px] font-semibold text-black">Attend Networking Events</p>
+                        <div className="text-[#616B78] lg:text-[15px] md:text-[12px] text-[9px] font-medium">
                             <p>
                                 Discover and participate in events that connect you
                                 with industry professionals and fellow students.
@@ -66,10 +66,10 @@ export default function UnlockYourPotential(){
                 </div>
 
                 {/* Inter Campus Connections */}
-                <div className="flex md:gap-x-5 gap-x-2 justify-between items-center  w-[49%] md:w-[46%]  md:pl-4 pl-2  bg-[#E3FFDB]">
+                <div className="flex md:gap-x-5 gap-x-4 offer_div justify-between items-center  w-[100%] md:w-[46%]  pl-8  bg-[#E3FFDB]">
                     <div className="flex flex-col gap-1">
-                        <p className="lg:text-[20px] md:text-[15px] text-[7px] font-semibold text-black">Share Your Success</p>
-                        <div className="text-[#616B78] lg:text-[15px] md:text-[12px] text-[6px] font-medium">
+                        <p className="lg:text-[20px] md:text-[15px] text-[12px] font-semibold text-black">Share Your Success</p>
+                        <div className="text-[#616B78] lg:text-[15px] md:text-[12px] text-[9px] font-medium">
                             <p>
                                 Inspire others by sharing your accomplishments and learning from the experience of your peers.
                             </p>
