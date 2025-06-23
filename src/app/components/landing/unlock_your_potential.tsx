@@ -8,7 +8,7 @@ import Link from "next/link"
 export default function UnlockYourPotential(){
     return(
         <div className="flex flex-col md:gap-y-16 gap-y-10 py-10 ">
-            <div className="flex flex-col justify-center items-center">
+            <div className="flex flex-col justify-center items-center text-black">
                 <p className="md:text-[35px] text-[18px] text-center font-bold">Unlock Your Potential with Our Platform</p>
                 <p className="md:text-[15px] text-[12px] text-center">
                     Our platform offers a suite of tools designed to help you succeed
@@ -81,10 +81,15 @@ export default function UnlockYourPotential(){
             </div>
 
             <section className="flex justify-center">
-                <article className="text-center space-y-2">
-                    <p className="md:text-[15px] text-[12px]">Ready to connect?</p>
-                    <Link href="/signup" className="text-center  sm:text-[14px] text-[12px] px-[3rem] md:px-[4rem] md:text-[16px] py-1 md:py-2 bg-gradient-to-r from-[#0E76FD] from-0% to-[#9747FF] to-65% text-white rounded-full font-medium hover:from-[#0C63DB] hover:to-[#7D3FE5] transition duration-300">
-                        Sign up
+                <article className="text-center space-y-2 text-black">
+                   
+                    <p className="md:text-[35px] text-[18px] text-center font-bold" style={{lineHeight: "2rem"}}>Ready to connect, learn and grow?</p>
+                    <p className="md:text-[15px] mb-5 text-[12px] text-center">
+                        Hundreds of students have already taken the leap.
+                    </p>
+            
+                    <Link href="/signup" className="text-center sm:text-[14px] text-[12px] px-[3rem] md:px-[4rem] md:text-[16px] py-1 md:py-2 bg-gradient-to-r from-[#0E76FD] from-0% to-[#9747FF] to-65% text-white rounded-lg font-medium hover:from-[#0C63DB] hover:to-[#7D3FE5] transition duration-300">
+                        Join them
                     </Link>
                 </article>
             </section>

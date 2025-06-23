@@ -4,11 +4,14 @@ import Image from "next/image";
 import signup_banner_new from "@/app/assets/images/signup_banner_new.jpeg";
 import Link from "next/link";
 import { Eye, EyeOff } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 
 export default function Page({ }) {
 
   const [showPassword, setShowPassword] = useState(false);
+
+  const router = useRouter()
 
   return (
     <div className="min-h-screen w-full flex flex-col md:flex-row text-black bg-white">
@@ -102,7 +105,8 @@ export default function Page({ }) {
 
           {/* Submit */}
           <button
-            type="submit"
+            // type="submit"
+            onClick={(e) => {e.preventDefault(); router.push('/onboarding')}}
             className="w-full bg-black text-white py-2 rounded-xl hover:bg-opacity-90 transition"
           >
             Sign Up

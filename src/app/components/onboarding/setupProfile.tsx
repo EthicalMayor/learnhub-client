@@ -16,6 +16,7 @@ type SetupProfileProps = {
 export default function SetupProfile({showInterest}: SetupProfileProps) {
     const fileInputRef = useRef<HTMLInputElement>(null);
     const [previewImage, setPreviewImage] = useState<string>(setup_profile_pic.src);
+    const [profileName, setProfileName] = useState("")
 
     const router = useRouter()
 
@@ -95,18 +96,20 @@ export default function SetupProfile({showInterest}: SetupProfileProps) {
                                 onChange={handleImageChange}
                             />
                         </div>
-                        <figcaption>Ademokoya Adedoyin Michael</figcaption>
+                        <figcaption>{profileName}</figcaption>
                     </figure>
 
                     {/* inputs */}
-                    <div className="space-y-3 w-full text-[#474747] text-[15px] mt-4">
+                    <div className="space-y-3 w-full text-black text-[15px] mt-4">
                         <input 
                             type="text" 
-                            className="py-3 px-5 w-full border border-solid border-[#9eb8da] rounded-xl" 
+                            className="py-3 px-5 w-full border border-solid border-[#9eb8da] rounded-xl " 
                             placeholder="Name / Nickname"
+                            value={profileName}
+                            onChange={(e) => {setProfileName(e.target.value)}}
                         />
                         <textarea 
-                            className="py-3 px-5 w-full border border-solid border-[#9eb8da] rounded-xl h-[7rem]"
+                            className="py-3 px-5 w-full border border-solid border-[#9eb8da]  rounded-xl h-[7rem]"
                             placeholder="Short bio (what you are you learning? A fun fact?)" 
                         />
                     </div>
