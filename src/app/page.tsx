@@ -95,10 +95,10 @@ export default function Home() {
 
   return (
     <div className="w-full flex flex-col justify-around relative text-black ">
-      <div className="px-[1.5rem] md:px-[3rem] md:py-[1.5rem] py-[0.8rem]">
+      <div className=" md:py-[1.5rem] py-[0.8rem]">
         <div className="flex flex-col gap-y-4">
           {/* Navbar */}
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center mx-[1.5rem] md:mx-[3rem]">
             <div className="lg:w-[10rem] md:w-[8rem] w-[6rem] h-full">
               <Image src={Logo} alt="Logo" />
             </div>
@@ -113,61 +113,63 @@ export default function Home() {
           </div>
 
           {/* Hero Section with Fade Background */}
-          <div className="relative w-full aspect-[16/9] sm:aspect-[4/3] lg:aspect-[16/9] rounded-2xl overflow-hidden">
-            {bgImages.map((src, i) => (
-              <div
-                key={i}
-                className={`absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
-                  i === currentIndex ? "opacity-100" : "opacity-0"
-                }`}
-                style={{ backgroundImage: `url(${src})` }}
-              />
-            ))}
+          <div className="md:mx-[3rem]">
+            <div className="relative w-full aspect-[16/9] sm:aspect-[4/3] lg:aspect-[16/9] md:rounded-2xl overflow-hidden">
+              {bgImages.map((src, i) => (
+                <div
+                  key={i}
+                  className={`absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
+                    i === currentIndex ? "opacity-100" : "opacity-0"
+                  }`}
+                  style={{ backgroundImage: `url(${src})` }}
+                />
+              ))}
 
-            <div className="relative z-10 h-full flex items-center px-3 md:px-5 lg:px-9">
-              <div className="flex flex-col gap-y-4 sm:gap-y-3 md:gap-y-5 w-full">
-                {/* Desktop */}
-                <div className="hidden md:flex flex-col gap-y-2 text-white">
-                  <div className="text-[30px] lg:text-[40px] text-start">
-                    <p>Study Smarter, Together</p>
-                    <p className="mt-1">Connect with Peers Who Get It</p>
-                  </div>
-                  <div className="text-[#D9D6DE] text-[15px] lg:text-[20px] text-start">
-                    <p>Join LearnHub to meet students like you</p>
-                    <p>whether you need study group,</p>
-                    <p>motivation, or just better notes</p>
-                  </div>
-                </div>
-
-                {/* Mobile */}
-                <div className="md:hidden h-fit text-white text-center w-[70%] mx-auto flex flex-col gap-y-1 sm:gap-y-3">
-                  
-                </div>
-
-                <div className="hidden md:flex md:justify-start justify-center mt-4">
-                  <Link
-                    href="/signup"
-                    className="text-center sm:text-[14px] text-[12px] px-[3rem] md:px-[4rem] md:text-[16px] py-1 md:py-2 bg-gradient-to-r from-[#0E76FD] to-[#9747FF] text-white rounded-full font-medium hover:from-[#0C63DB] hover:to-[#7D3FE5] transition duration-300"
-                  >
-                    Sign up
-                  </Link>
-                </div>
-
-                {/* Stats */}
-                <div className="hidden md:flex md:justify-start justify-center">
-                  <div className="flex sm:mt-4 md:mt-8">
-                    <div className="flex text-white items-center gap-x-2 md:pr-8 md:mr-8 pr-4 mr-4 border-r-2 border-[#606060]">
-                      <p className="text-[25px] sm:text-[30px] md:text-[39px] lg:text-[49px]">+25</p>
-                      <div className="flex flex-col text-[8px] md:text-[12px] lg:text-[16px]">
-                        <p>Universities</p>
-                        <p className="-mt-1">across Africa</p>
-                      </div>
+              <div className="relative z-10 h-full flex items-center px-3 md:px-5 lg:px-9">
+                <div className="flex flex-col gap-y-4 sm:gap-y-3 md:gap-y-5 w-full">
+                  {/* Desktop */}
+                  <div className="hidden md:flex flex-col gap-y-2 text-white">
+                    <div className="text-[30px] lg:text-[40px] text-start">
+                      <p>Study Smarter, Together</p>
+                      <p className="mt-1">Connect with Peers Who Get It</p>
                     </div>
-                    <div className="flex text-white items-center gap-x-2">
-                      <p className="text-[25px] sm:text-[30px] md:text-[39px] lg:text-[49px]">+100</p>
-                      <div className="flex flex-col text-[8px] md:text-[12px] lg:text-[16px]">
-                        <p>Common</p>
-                        <p className="-mt-1">Rooms</p>
+                    <div className="text-[#D9D6DE] text-[15px] lg:text-[20px] text-start">
+                      <p>Join LearnHub to meet students like you</p>
+                      <p>whether you need study group,</p>
+                      <p>motivation, or just better notes</p>
+                    </div>
+                  </div>
+
+                  {/* Mobile */}
+                  <div className="md:hidden h-fit text-white text-center w-[70%] mx-auto flex flex-col gap-y-1 sm:gap-y-3">
+                    
+                  </div>
+
+                  <div className="hidden md:flex md:justify-start justify-center mt-4">
+                    <Link
+                      href="/signup"
+                      className="text-center sm:text-[14px] text-[12px] px-[3rem] md:px-[4rem] md:text-[16px] py-1 md:py-2 bg-gradient-to-r from-[#0E76FD] to-[#9747FF] text-white rounded-full font-medium hover:from-[#0C63DB] hover:to-[#7D3FE5] transition duration-300"
+                    >
+                      Sign up
+                    </Link>
+                  </div>
+
+                  {/* Stats */}
+                  <div className="hidden md:flex md:justify-start justify-center">
+                    <div className="flex sm:mt-4 md:mt-8">
+                      <div className="flex text-white items-center gap-x-2 md:pr-8 md:mr-8 pr-4 mr-4 border-r-2 border-[#606060]">
+                        <p className="text-[25px] sm:text-[30px] md:text-[39px] lg:text-[49px]">+25</p>
+                        <div className="flex flex-col text-[8px] md:text-[12px] lg:text-[16px]">
+                          <p>Universities</p>
+                          <p className="-mt-1">across Africa</p>
+                        </div>
+                      </div>
+                      <div className="flex text-white items-center gap-x-2">
+                        <p className="text-[25px] sm:text-[30px] md:text-[39px] lg:text-[49px]">+100</p>
+                        <div className="flex flex-col text-[8px] md:text-[12px] lg:text-[16px]">
+                          <p>Campus</p>
+                          <p className="-mt-1">Rooms</p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -177,20 +179,20 @@ export default function Home() {
           </div>
 
           {/* For Mobile Only */}
-          <div className="md:hidden">
-            <div className=" h-fit text-black text-center w-[90%] mx-auto flex flex-col gap-y-1 sm:gap-y-3">
-                <p className=" text-[32px] font-bold" style={{lineHeight: "2rem"}}>
+          <div className="md:hidden mx-[1.5rem] md:mx-[3rem]">
+            <div className="h-fit text-black text-center w-[90%] mx-auto flex flex-col gap-y-1 sm:gap-y-3" >
+                <p className=" text-[32px] font-bold"  style={{ fontFamily: "WixMadeforDisplay", fontWeight: "900", lineHeight: "2rem" }}>
                 Learn. Connect. Collaborate.
                 </p>
-                <p className="text-[20px]">
+                <p className="text-[20px] text-[#323232] font-semibold">
                 Campus is full of opportunities. 
                 </p>
-                <p className="text-[12px]">
+                <p className="text-[12px] text-[#4A4A4A] font-medium">
                     Find Friends, network smarter, join rooms, <br/> and grow with other students
                 </p>
             </div>
 
-            <div className="flex md:justify-start justify-center mt-4">
+            <div className="flex md:justify-start justify-center mt-4 mx-[1.5rem] md:mx-[3rem]">
                 <Link
                 href="/signup"
                 className="text-center sm:text-[14px] text-[12px] px-[3rem] md:px-[4rem] md:text-[16px] py-1 md:py-2 bg-gradient-to-r from-[#0E76FD] to-[#9747FF] text-white rounded-full font-medium hover:from-[#0C63DB] hover:to-[#7D3FE5] transition duration-300"
@@ -199,7 +201,7 @@ export default function Home() {
                 </Link>
             </div>
 
-            <div className="flex md:justify-start justify-center text-black font-semibold mt-[2rem]">
+            <div className="flex md:justify-start justify-center text-black font-semibold mt-[2rem] mx-[1.5rem] md:mx-[3rem]">
                 <div className="flex sm:mt-4 md:mt-8">
                 <div className="flex  items-center gap-x-2 md:pr-8 md:mr-8 pr-4 mr-4 border-r-2 border-[#606060]">
                     <p className="text-[25px] sm:text-[30px] md:text-[39px] lg:text-[49px]">+25</p>
@@ -211,7 +213,7 @@ export default function Home() {
                 <div className="flex  items-center gap-x-2">
                     <p className="text-[25px] sm:text-[30px] md:text-[39px] lg:text-[49px]">+100</p>
                     <div className="flex flex-col text-[8px] md:text-[12px] lg:text-[16px]">
-                    <p>Common</p>
+                    <p>Campus</p>
                     <p className="-mt-1">Rooms</p>
                     </div>
                 </div>
@@ -220,15 +222,15 @@ export default function Home() {
           </div>
 
           {/* Remaining Sections */}
-          <div className="md:mt-6 mt-3">
+          <div className="md:mt-6 mt-3 mx-[1.5rem] md:mx-[3rem]">
             <SchoolLogos />
           </div>
 
-          <div className="md:mt-12 mt-6">
+          <div className="md:mt-12 mt-6 mx-[1.5rem] md:mx-[3rem]">
             <WhatWeOffer />
           </div>
 
-          <section className="flex text-black justify-center my-3">
+          <section className="flex text-black justify-center my-3 mx-[1.5rem] md:mx-[3rem]">
             <article className="flex flex-col text-center w-[90%]">
               <Image src={landing_down_img} alt="landing_down_img" style={{width: "100%"}}/>
               <div className="flex justify-center">
@@ -245,7 +247,7 @@ export default function Home() {
             </article>
           </section>
 
-          <div className="md:mt-6 mt-3 border-t border-solid border-[#9F9F9F] md:mb-[20rem] mb-[7rem]">
+          <div className="md:mt-6 mt-3 border-t border-solid border-[#9F9F9F] md:mb-[20rem] mb-[7rem] mx-[1.5rem] md:mx-[3rem]">
             <UnlockYourPotential />
           </div>
           

@@ -51,7 +51,7 @@ export default function WhatWeOffer(){
                     <div className="flex flex-col gap-2">
                         <div className="flex gap-x-4 items-center">
                             <p className="lg:text-[24px] md:text-[15px] text-[12px] font-semibold text-black">Find Your Tribe</p>
-                            <p className="text-[10px] md:text-[12px] px-2 bg-[#FFF71B] text-black font-extralight rounded-full">Coming soon</p>
+                            <p className="text-[10px] md:text-[12px] px-2 bg-[#FFF71B] text-black  rounded-full">Coming soon</p>
                         </div>
                         <div className="text-[#212121] lg:text-[16px] text-[11px] ">
                             <p>Join exclusive school Hubs for: Creatives, Tech talents,
@@ -68,7 +68,7 @@ export default function WhatWeOffer(){
                     <div className="flex flex-col gap-2">
                         <div className="flex gap-x-4 items-center">
                             <p className="lg:text-[24px] md:text-[15px] text-[12px] font-semibold text-black">Inter Campus Connections</p>
-                            <p className="text-[10px] md:text-[12px] px-2 bg-[#FFF71B] text-black font-extralight rounded-full">Coming soon</p>
+                            <p className="text-[10px] md:text-[12px] px-2 bg-[#FFF71B] text-black  rounded-full">Coming soon</p>
                         </div>
                         <div className="text-[#212121] lg:text-[16px] text-[11px] ">
                             <p>

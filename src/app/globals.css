@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+
+
+
 /* For Animation */
 @keyframes scroll {
   0% {
@@ -53,6 +56,15 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "WixMadeforDisplay";
+  src: url("/fonts/WixMadeforDisplay-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900; /* Range for variable font if applicable */
+  font-style: normal;
+  font-display: swap; /* Optional but recommended for better performance */
+}
+
 
 /* STYLING ELEMENTS */
 body {
