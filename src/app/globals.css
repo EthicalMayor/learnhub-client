@@ -11,7 +11,7 @@
 }
 
 .animate-scroll {
-  animation: scroll 150s linear infinite alternate;
+  animation: scroll 80s linear infinite alternate;
 }
 .animate-scroll:hover {
   animation-play-state: paused;

@@ -166,8 +166,8 @@ export default function Home() {
                     <div className="flex text-white items-center gap-x-2">
                       <p className="text-[25px] sm:text-[30px] md:text-[39px] lg:text-[49px]">+100</p>
                       <div className="flex flex-col text-[8px] md:text-[12px] lg:text-[16px]">
-                        <p>Community</p>
-                        <p className="-mt-1">Groups</p>
+                        <p>Common</p>
+                        <p className="-mt-1">Rooms</p>
                       </div>
                     </div>
                   </div>
@@ -211,8 +211,8 @@ export default function Home() {
                 <div className="flex  items-center gap-x-2">
                     <p className="text-[25px] sm:text-[30px] md:text-[39px] lg:text-[49px]">+100</p>
                     <div className="flex flex-col text-[8px] md:text-[12px] lg:text-[16px]">
-                    <p>Community</p>
-                    <p className="-mt-1">Groups</p>
+                    <p>Common</p>
+                    <p className="-mt-1">Rooms</p>
                     </div>
                 </div>
                 </div>
@@ -230,14 +230,18 @@ export default function Home() {
 
           <section className="flex text-black justify-center my-3">
             <article className="flex flex-col text-center w-[90%]">
-            <Image src={landing_down_img} alt="landing_down_img" style={{width: "100%"}}/>
-              <p className="text-[18px] md:text-[30px] mt-6 font-semibold">Help us launch in your University</p>
-              <button
-                className="mt-2 px-[1rem] text-[12px] md:px-[8rem] md:text-[20px] py-2 md:py-2 bg-gradient-to-r from-[#0E76FD] to-[#9747FF] text-white rounded-full font-medium hover:from-[#0C63DB] hover:to-[#7D3FE5] transition duration-300"
-                onClick={() => router.push("/signup")}
-              >
-                Become a LearnHub campus ambassador
-              </button>
+              <Image src={landing_down_img} alt="landing_down_img" style={{width: "100%"}}/>
+              <div className="flex justify-center">
+                <div className="w-[90%] md:w-[60%]">
+                  <p className="text-[18px] md:text-[30px] mt-6 font-semibold">Help us launch in your University</p>
+                  <button
+                    className="mt-2 px-[1rem] text-[12px] md:px-[2rem] w-full md:text-[20px] py-2 md:py-2 bg-gradient-to-r from-[#0E76FD] to-[#9747FF] text-white rounded-full font-medium hover:from-[#0C63DB] hover:to-[#7D3FE5] transition duration-300"
+                    onClick={() => router.push("/signup")}
+                  >
+                    Become a LearnHub campus ambassador
+                  </button>
+                </div>
+              </div>
             </article>
           </section>
 
