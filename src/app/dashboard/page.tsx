@@ -20,13 +20,13 @@ export default function Dashboard(){
 
     return(
         <div>
-            <section className='px-7 py-4 mt-5 space-y-6'>
+            <section className='px-3 py-4 mt-5 space-y-6'>
                 <header>
                     <div className='flex justify-between w-[55%]'>
-                        <div className='w-8 h-8 rounded-full'>
+                        <div className='w-10 h-10 rounded-full'>
                             <Image src={profile_pic} alt='profile pic' className='w-full h-full'/>
                         </div>
-                        <Image src={logo} alt='logo' className='w-8 h-8'/>
+                        <Image src={logo} alt='logo' className='w-10 h-10'/>
                     </div>
                 </header>
                 <div className="text-black space-y-4">
@@ -111,7 +111,7 @@ export default function Dashboard(){
                         </article>
                     </section>
 
-                    <section className='w-[90%] mt-8 py-4 px-2 flex justify-between items-center bg-[#FAFAFA] rounded-2xl offer_div'>
+                    <section className='w-[90%] mt-8 py-6 px-2 flex justify-between items-center bg-[#FAFAFA] rounded-2xl offer_div'>
                         <Image src={dashboard_ambassador} alt='dashboard_ambassador' className='w-[5rem] h-[4rem]'/>
                         <article className='text-[9px] w-[50%]'>
                             <p className='text-[#303030]'>Join us, become our ambassador and help us grow in your campus.</p>
@@ -122,25 +122,25 @@ export default function Dashboard(){
                 </div>
             </section>
 
-            <footer className='mt-9 w-full py-3 px-3 text-[#282828] text-[13px] flex justify-around offer_div '>
+            <footer className='mt-9 w-full py-3 px-3 text-[#282828] text-[12px] flex justify-around offer_div '>
                 <button className='w-fit flex flex-col justify-center items-center'>
-                    <Image src={dashboard_home} alt='dashboard_home' className='h-[1.5rem] w-[1.7rem]'/>
+                    <Image src={dashboard_home} alt='dashboard_home' className='h-[1.3rem] w-[1.5rem]'/>
                     <p>Home</p>
                 </button>
                 <button className='w-fit flex flex-col justify-center items-center'>
-                    <Image src={dashboard_explore} alt='dashboard_explore' className='h-[1.5rem] w-[1.7rem]'/>
+                    <Image src={dashboard_explore} alt='dashboard_explore' className='h-[1.3rem] w-[1.5rem]'/>
                     <p>Explore</p>
                 </button>
                 <button className='w-fit flex flex-col justify-center items-center'>
-                    <Image src={dashboard_rooms} alt='dashboard_rooms' className='h-[1.5rem] w-[1.7rem]'/>
+                    <Image src={dashboard_rooms} alt='dashboard_rooms' className='h-[1.3rem] w-[1.5rem]'/>
                     <p>Rooms</p>
                 </button>
                 <button className='w-fit flex flex-col justify-center items-center'>
-                    <Image src={dashboard_notification} alt='dashboard_notification' className='h-[1.5rem] w-[1.7rem]'/>
+                    <Image src={dashboard_notification} alt='dashboard_notification' className='h-[1.3rem] w-[1.5rem]'/>
                     <p>Notification</p>
                 </button>
                 <button className='w-fit flex flex-col justify-center items-center'>
-                    <Image src={dashboard_chats} alt='dashboard_chats' className='h-[1.5rem] w-[1.7rem]'/>
+                    <Image src={dashboard_chats} alt='dashboard_chats' className='h-[1.3rem] w-[1.5rem]'/>
                     <p>Chats</p>
                 </button>
             </footer>
