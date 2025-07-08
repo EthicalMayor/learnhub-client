@@ -40,7 +40,7 @@ export default function Dashboard(){
                                 </div>
                                 <div>
                                     <p className='sf_medium'>Ajayi Kunle</p>
-                                    <div className='flex gap-2'>
+                                    <div className='flex gap-2 mt-2'>
                                         <div className='relative w-[2rem]'>
                                             <Image src={friend1} alt='friend1' className='w-5 h-5 rounded-full'/>
                                             <Image src={friend2} alt='friend1' className='w-5 h-5 rounded-full absolute top-0 right-0'/>
