@@ -17,7 +17,7 @@ import Footer from '../components/footer'
 export default function Dashboard(){
 
     return(
-        <div className=''>
+        <div className='sf_medium'>
             
             <Header/>
 
