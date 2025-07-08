@@ -1,5 +1,4 @@
-import logo from '@/app/assets/images/Learnhub_Logo.png'
-import profile_pic from '@/app/assets/images/dashboard_profile_pic.png'
+
 import friend_pic from '@/app/assets/images/friend_pic.png'
 import friend1 from '@/app/assets/images/friend1.png'
 import friend2 from '@/app/assets/images/friend2.png'
@@ -9,26 +8,20 @@ import join_room from '@/app/assets/images/join_room.png'
 import dashoard_tech_gang from '@/app/assets/images/dashoard_tech_gang.png'
 import blue_arrow_right from '@/app/assets/images/blue_arrow_right.png'
 import dashboard_ambassador from '@/app/assets/images/dashboard_ambassador.png'
-import dashboard_home from '@/app/assets/images/dashboard_home.png'
-import dashboard_explore from '@/app/assets/images/dashboard_explore.png'
-import dashboard_rooms from '@/app/assets/images/dashboard_rooms.png'
-import dashboard_notification from '@/app/assets/images/dashboard_notification.png'
-import dashboard_chats from '@/app/assets/images/dashboard_chats.png'
 import Image from 'next/image'
+import Header from '../components/header'
+import Footer from '../components/footer'
+
+
 
 export default function Dashboard(){
 
     return(
-        <div>
-            <section className='px-3 py-4 mt-5 space-y-6'>
-                <header>
-                    <div className='flex justify-between w-[55%]'>
-                        <div className='w-10 h-10 rounded-full'>
-                            <Image src={profile_pic} alt='profile pic' className='w-full h-full'/>
-                        </div>
-                        <Image src={logo} alt='logo' className='w-10 h-10'/>
-                    </div>
-                </header>
+        <div className=''>
+            
+            <Header/>
+
+            <section className='pt-[5rem] pb-[5rem] px-3 py-4 space-y-6'>
                 <div className="text-black space-y-4">
                     <div className="text-[20px] sf_semibold">Explore Connections</div>
 
@@ -54,10 +47,10 @@ export default function Dashboard(){
                                         </div>
                                         <div className='flex gap-2 items-center'>
                                             <Image src={friend_dot} alt='friend_dot' className='w-[0.2rem] h-[0.2rem]'/>
-                                            <p className='text-[#282828] text-[9px] sf_light opacity-85'>2 mutual connections</p>
+                                            <p className='text-[#282828] text-[9px]  opacity-85'>2 mutual connections</p>
                                         </div>
                                     </div>
-                                    <div className='flex gap-3 mt-4 text-[#282828] text-[9px] sf_light opacity-85'>
+                                    <div className='flex gap-3 mt-4 text-[#282828] text-[9px]  opacity-85'>
                                         <p >Medicine</p>
                                         <p >Mobile Design</p>
                                     </div>
@@ -71,12 +64,12 @@ export default function Dashboard(){
                         <div className="text-[20px] mt-7 sf_semibold">Campus Rooms</div>
                         
                         <article className='flex justify-between mt-5'>
-                            <button className='sf_light flex gap-2 py-2 items-center px-2 border border-solid border-[#323232] rounded-lg'>
+                            <button className=' flex gap-2 py-2 items-center px-2 border border-solid border-[#323232] rounded-lg'>
                                 <Image src={edit_room} alt='edit_room' className='h-[1rem] w-[1rem]'/>
                                 <p className='text-[12px] text-[#2F2F2F]'>Create Campus Room</p>
                             </button>
 
-                            <button className='sf_light flex gap-2 py-2 items-center bg-[#292D32] text-white px-2 border border-solid border-black rounded-lg'>
+                            <button className=' flex gap-2 py-2 items-center bg-[#292D32] text-white px-2 border border-solid border-black rounded-lg'>
                                 <Image src={join_room} alt='edit_room' className='h-[1rem] w-[1rem]'/>
                                 <p className='text-[12px]'>Create Campus Room</p>
                             </button>
@@ -115,35 +108,14 @@ export default function Dashboard(){
                         <Image src={dashboard_ambassador} alt='dashboard_ambassador' className='w-[5rem] h-[4rem]'/>
                         <article className='text-[9px] w-[50%]'>
                             <p className='text-[#303030]'>Join us, become our ambassador and help us grow in your campus.</p>
-                            <button className="bg-[#005ACE] px-4 py-2 rounded-full mt-1 text-white sf_light">Become an Ambassador</button>
+                            <button className="bg-[#005ACE] px-4 py-2 rounded-full mt-1 text-white ">Become an Ambassador</button>
                         </article>
                     </section>
 
                 </div>
             </section>
 
-            <footer className='mt-9 w-full py-3 px-3 text-[#282828] text-[12px] flex justify-around offer_div '>
-                <button className='w-fit flex flex-col justify-center items-center'>
-                    <Image src={dashboard_home} alt='dashboard_home' className='h-[1.3rem] w-[1.5rem]'/>
-                    <p>Home</p>
-                </button>
-                <button className='w-fit flex flex-col justify-center items-center'>
-                    <Image src={dashboard_explore} alt='dashboard_explore' className='h-[1.3rem] w-[1.5rem]'/>
-                    <p>Explore</p>
-                </button>
-                <button className='w-fit flex flex-col justify-center items-center'>
-                    <Image src={dashboard_rooms} alt='dashboard_rooms' className='h-[1.3rem] w-[1.5rem]'/>
-                    <p>Rooms</p>
-                </button>
-                <button className='w-fit flex flex-col justify-center items-center'>
-                    <Image src={dashboard_notification} alt='dashboard_notification' className='h-[1.3rem] w-[1.5rem]'/>
-                    <p>Notification</p>
-                </button>
-                <button className='w-fit flex flex-col justify-center items-center'>
-                    <Image src={dashboard_chats} alt='dashboard_chats' className='h-[1.3rem] w-[1.5rem]'/>
-                    <p>Chats</p>
-                </button>
-            </footer>
+            <Footer/>
         </div>
     )
 }

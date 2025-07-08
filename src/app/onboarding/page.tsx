@@ -1,10 +1,10 @@
 "use client";
 
-import OnboardingWelcome from "../components/onboarding/welcome";
-import ChooseYourVibe from "../components/onboarding/chooseYourVibe";
-import Institution from "../components/onboarding/institution";
-import Interest from "../components/onboarding/interest";
-import SetupProfile from "../components/onboarding/setupProfile";
+import OnboardingWelcome from "./components/welcome";
+import ChooseYourVibe from "./components/chooseYourVibe";
+import Institution from "./components/institution";
+import Interest from "./components/interest";
+import SetupProfile from "./components/setupProfile";
 import { useState } from "react";
 
 export default function Onboarding() {
