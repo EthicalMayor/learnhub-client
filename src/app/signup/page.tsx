@@ -43,15 +43,14 @@ export default function Page() {
     setErrors({ ...errors, [e.target.name]: "" }); // Clear error when typing
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
-    // TODO: Call API for signup
 
     try {
       const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/accounts/signup/`, {
         method: "POST",
-        headers: {"Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           full_name: formData.fullname,
           email: formData.email,
@@ -60,6 +59,7 @@ export default function Page() {
       });
 
       const data = await res.json();
+
       if (!res.ok) {
         setErrors({
           email: data.email?.[0] || "",
@@ -80,11 +80,14 @@ export default function Page() {
         localStorage.setItem("refresh_token", refreshToken);
       }
 
+      localStorage.setItem("user_id", data.data?.user_id);
+      localStorage.setItem("email", data.data?.email);
+
       // redirect after successful signup
       router.push("/onboarding");
     } catch (err) {
       console.error("Signup error:", err);
-      setErrors({email: "Something went wrong. Please try again."});
+      setErrors({ email: "Something went wrong. Please try again." });
     }
   };
 
@@ -133,7 +136,7 @@ export default function Page() {
           {/* Full Name */}
           <div>
             <label htmlFor="fullname" className="block text-sm font-medium mb-1">
-              Full Name
+              Full Named
             </label>
             <input
               type="text"
