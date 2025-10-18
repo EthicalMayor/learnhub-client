@@ -166,13 +166,3 @@ export default function Home() {
     </main>
   );
 }
-
-// Stat Component
-function Stat({ value, label }: { value: string; label: string }) {
-  return (
-    <div className="flex flex-col items-center text-center">
-      <p className="text-4xl md:text-5xl font-bold text-white">{value}</p>
-      <p className="text-sm md:text-base text-gray-200 mt-1 max-w-[120px]">{label}</p>
-    </div>
-  );
-}
