@@ -1,83 +1,109 @@
-import Image from "next/image";
 import campus_room from "@/app/assets/images/campus_room.png";
 import explore_connection from "@/app/assets/images/explore_connection.png";
 import find_your_tribe from "@/app/assets/images/find_your_tribe.png";
 import inter_campus_connection from "@/app/assets/images/inter_campus_connection.png";
+import Image from "next/image";
 
 export default function WhatWeOffer() {
-  const offers = [
-    {
-      title: "Campus Rooms",
-      desc: "Start or join campus-only rooms to study, chat, and collaborate with classmates.",
-      img: campus_room,
-    },
-    {
-      title: "Explore Connections",
-      desc: "Meet students with similar goals or passions, and grow your campus circle.",
-      img: explore_connection,
-    },
-    {
-      title: "Find Your Tribe",
-      desc: "Join special hubs for creatives, techies, entrepreneurs, and more.",
-      img: find_your_tribe,
-      tag: "Coming soon",
-    },
-    {
-      title: "Inter Campus Connections",
-      desc: "Connect and collaborate with students from other universities.",
-      img: inter_campus_connection,
-      tag: "Coming soon",
-    },
-  ];
-
   return (
-    <section className="w-full">
-      <div className="max-w-6xl mx-auto px-5 sm:px-8">
-        {/* Title */}
-        <div className="flex justify-center mb-10">
-          <p className="inline-block text-lg md:text-2xl font-semibold">
-            What We Are Offering
-          </p>
+    <div className="flex flex-col md:gap-y-16 gap-y-10 py-10 border-y border-solid border-[#b1b0b0]">
+      <div className="flex justify-center">
+        <p className="px-5 py-1 font-semibold border border-solid border-black text-black  md:rounded-2xl rounded-xl md:text-[30px] text-[15px]">
+          What we are offering?
+        </p>
+      </div>
+
+      <div className="flex flex-wrap justify-between md:gap-y-20 gap-y-10 md:flex-row flex-col">
+        {/* Campus Rooms */}
+        <div className="flex md:gap-x-5 gap-x-3 items-center offer_div w-full md:w-[46%]  md:px-4 py-2 rounded-lg px-2">
+          <Image
+            src={campus_room}
+            alt="campus_room"
+            className="lg:w-[5rem] lg:h-[5rem] md:w-[3rem] md:h-[3rem] w-[3rem] h-[3rem]"
+          />
+          <div className="flex flex-col gap-2">
+            <p className="lg:text-[24px] md:text-[15px] text-[12px] font-semibold text-black">
+              Campus Rooms
+            </p>
+            <div className="text-[#212121] lg:text-[16px] text-[11px] ">
+              <p>
+                Start and join rooms just for students on your campus. Create spaces for your study
+                group, interests, or student community, and grow together.
+              </p>
+            </div>
+          </div>
         </div>
 
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-10">
-          {offers.map((offer, index) => (
-            <div
-              key={index}
-              className="relative group flex items-start gap-4 sm:gap-6 bg-white rounded-2xl p-5 sm:p-7 shadow-md hover:shadow-xl hover:border-blue-500 transition-all duration-300"
-            >
-              {/* Coming Soon Tag */}
-              {offer.tag && (
-                <span className="absolute top-0 left-0 rounded-tl-2xl rounded-br-xl bg-yellow-300 text-gray-800 text-[10px] sm:text-xs font-medium px-3 py-1 shadow-sm">
-                  {offer.tag}
-                </span>
-              )}
-
-              {/* Icon */}
-              <div className="flex-shrink-0">
-                <div className="p-3 rounded-xl bg-gradient-to-br from-blue-50 to-blue-100 group-hover:scale-105 transition-transform duration-300">
-                  <Image
-                    src={offer.img}
-                    alt={offer.title}
-                    className="w-12 h-12 sm:w-14 sm:h-14 object-contain"
-                  />
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="flex flex-col gap-1">
-                <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900">
-                  {offer.title}
-                </h3>
-                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                  {offer.desc}
-                </p>
-              </div>
+        {/* Explore Connections */}
+        <div className="flex md:gap-x-5 gap-x-3  items-center offer_div w-full md:w-[46%]  md:px-4 py-2 rounded-lg px-2">
+          <Image
+            src={explore_connection}
+            alt="explore_connection"
+            className="lg:w-[5rem] lg:h-[5rem] md:w-[3rem] md:h-[3rem] w-[3rem] h-[3rem]"
+          />
+          <div className="flex flex-col gap-2">
+            <p className="lg:text-[24px] md:text-[15px] text-[12px] font-semibold text-black">
+              Explore Connections
+            </p>
+            <div className="text-[#212121] lg:text-[16px] text-[11px] ">
+              <p>
+                Discover students on your campus—find your study buddy, connect with creatives like
+                you, or link with entrepreneurs just like yourself.
+              </p>
             </div>
-          ))}
+          </div>
+        </div>
+
+        {/* Find Your Tribe */}
+        <div className="flex md:gap-x-5 gap-x-3  items-center offer_div w-full md:w-[46%]  md:px-4 py-2 rounded-lg px-2">
+          <Image
+            src={find_your_tribe}
+            alt="find_your_tribe"
+            className="lg:w-[5rem] lg:h-[5rem] md:w-[3rem] md:h-[3rem] w-[3rem] h-[3rem]"
+          />
+          <div className="flex flex-col gap-2">
+            <div className="flex gap-x-4 items-center">
+              <p className="lg:text-[24px] md:text-[15px] text-[12px] font-semibold text-black">
+                Find Your Tribe
+              </p>
+              <p className="text-[10px] md:text-[12px] px-2 bg-[#FFF71B] text-black  rounded-full">
+                Coming soon
+              </p>
+            </div>
+            <div className="text-[#212121] lg:text-[16px] text-[11px] ">
+              <p>
+                Join exclusive school Hubs for: Creatives, Tech talents, Entrepreneurs, Marketplace
+                sellers, Career builders and much more...
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Inter Campus Connections */}
+        <div className="flex md:gap-x-5 gap-x-3  items-center offer_div w-full md:w-[46%]  md:px-4 py-2 rounded-lg px-2">
+          <Image
+            src={inter_campus_connection}
+            alt="inter_campus_connection"
+            className="lg:w-[5rem] lg:h-[5rem] md:w-[3rem] md:h-[3rem] w-[3rem] h-[3rem]"
+          />
+          <div className="flex flex-col gap-2">
+            <div className="flex gap-x-4 items-center">
+              <p className="lg:text-[24px] md:text-[15px] text-[12px] font-semibold text-black">
+                Inter Campus Connections
+              </p>
+              <p className="text-[10px] md:text-[12px] px-2 bg-[#FFF71B] text-black  rounded-full">
+                Coming soon
+              </p>
+            </div>
+            <div className="text-[#212121] lg:text-[16px] text-[11px] ">
+              <p>
+                Your network doesn&apos;t stop at your school, connect, create and collab from
+                campuses everywhere
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

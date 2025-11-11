@@ -1,43 +1,46 @@
-import Image from "next/image"
-import TikTok from "@/app/assets/images/TikTok.png"
-import Instagram from "@/app/assets/images/Instagram.png"
-import X from "@/app/assets/images/X.png"
+import TikTok from "@/app/assets/images/TikTok.png";
+import Instagram from "@/app/assets/images/Instagram.png";
+import X from "@/app/assets/images/X.png";
+import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-white border-t border-gray-200">
-      <div className="container mx-auto px-6 py-10 flex flex-col md:flex-row justify-between items-center gap-6">
-        {/* Left Section */}
-        <div className="flex flex-col md:flex-row items-center text-gray-700 text-sm md:text-base gap-4 md:gap-6">
-          <p className="font-medium text-gray-900">&copy; 2025 LearnHub</p>
-          <nav className="flex flex-wrap justify-center md:justify-start gap-4 md:gap-6 text-gray-600">
-            <p className="hover:text-gray-900 cursor-pointer transition-colors">Terms of Service</p>
-            <p className="hover:text-gray-900 cursor-pointer transition-colors">Privacy Policy</p>
-            <p className="hover:text-gray-900 cursor-pointer transition-colors">Community</p>
-            <p className="hover:text-gray-900 cursor-pointer transition-colors">Jobs</p>
-            <p className="hover:text-gray-900 cursor-pointer transition-colors">FAQs</p>
-          </nav>
+    <div className="bg-[#1A232F] text-white lg:text-[16px] md:text-[14px] text-[8px] w-full flex md:justify-center md:py-[2rem] py-[1rem]">
+      <div className="flex items-end md:items-center mx-4">
+        {/* Left */}
+        <div
+          className="flex flex-col md:flex-row gap-y-1 lg:gap-x-4 lg:pr-12 lg:mr-12 md:border-r border-solid border-[#9C9C9C]
+                                md:gap-x-3 md:pr-9 md:mr-9 gap-x-2 pr-6 mr-6 opacity-80 "
+        >
+          <p className="hidden md:block">&copy; 2025 LearnHub</p>
+          <p>Terms of Service</p>
+          <p>Privacy Policy</p>
+          <p>Community</p>
+          <p>Jobs</p>
+          <p>FAQs</p>
+
+          <p className=" md:hidden mt-2">&copy; 2025 LearnHub</p>
         </div>
 
-        {/* Right Section */}
-        <div className="flex items-center gap-5">
+        {/* Right */}
+        <div className="flex lg:gap-x-4 md:gap-x-3 gap-x-2">
           <Image
             src={TikTok}
             alt="TikTok"
-            className="w-6 h-6 md:w-7 md:h-7 hover:opacity-80 cursor-pointer transition"
+            className="lg:w-[37.5px] lg:h-[37.5px] md:w-[30px] md:h-[30px] w-[4vw] h-[4vw]"
           />
           <Image
             src={Instagram}
             alt="Instagram"
-            className="w-6 h-6 md:w-7 md:h-7 hover:opacity-80 cursor-pointer transition"
+            className="lg:w-[37.5px] lg:h-[37.5px] md:w-[30px] md:h-[30px] w-[4vw] h-[4vw]"
           />
           <Image
             src={X}
             alt="X"
-            className="w-6 h-6 md:w-7 md:h-7 hover:opacity-80 cursor-pointer transition"
+            className="lg:w-[37.5px] lg:h-[37.5px] md:w-[30px] md:h-[30px] w-[4vw] h-[4vw]"
           />
         </div>
       </div>
-    </footer>
-  )
+    </div>
+  );
 }
