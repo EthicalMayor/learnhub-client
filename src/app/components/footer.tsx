@@ -1,33 +1,56 @@
-import dashboard_home from '@/app/assets/images/dashboard_home.png'
-import dashboard_explore from '@/app/assets/images/dashboard_explore.png'
-import dashboard_rooms from '@/app/assets/images/dashboard_rooms.png'
-import dashboard_notification from '@/app/assets/images/dashboard_notification.png'
-import dashboard_chats from '@/app/assets/images/dashboard_chats.png'
-import Image from 'next/image'
+"use client";
 
-export default function Footer(){
-    return(
-        <footer className='fixed bottom-0 z-50 bg-white w-full py-3 px-3 text-[#282828] text-[12px] flex justify-around offer_div'>
-            <button className='w-fit flex flex-col justify-center items-center'>
-                <Image src={dashboard_home} alt='dashboard_home' className='h-[1.3rem] w-[1.5rem]'/>
-                <p>Home</p>
-            </button>
-            <button className='w-fit flex flex-col justify-center items-center'>
-                <Image src={dashboard_explore} alt='dashboard_explore' className='h-[1.3rem] w-[1.5rem]'/>
-                <p>Explore</p>
-            </button>
-            <button className='w-fit flex flex-col justify-center items-center'>
-                <Image src={dashboard_rooms} alt='dashboard_rooms' className='h-[1.3rem] w-[1.5rem]'/>
-                <p>Rooms</p>
-            </button>
-            <button className='w-fit flex flex-col justify-center items-center'>
-                <Image src={dashboard_notification} alt='dashboard_notification' className='h-[1.3rem] w-[1.5rem]'/>
-                <p>Notification</p>
-            </button>
-            <button className='w-fit flex flex-col justify-center items-center'>
-                <Image src={dashboard_chats} alt='dashboard_chats' className='h-[1.3rem] w-[1.5rem]'/>
-                <p>Chats</p>
-            </button>
-        </footer>
-    )
+import { usePathname } from "next/navigation";
+import { Home, Users, LayoutDashboard, Bell, MessageSquare } from "lucide-react";
+
+export default function Footer() {
+  const pathname = usePathname();
+
+  const isActive = (path: string) => pathname.startsWith(path);
+
+  return (
+    <footer className="fixed bottom-0 z-50 bg-white w-full py-3 px-3 text-[12px] flex justify-around shadow-md md:hidden">
+      {/* HOME */}
+      <button className="flex flex-col justify-center items-center">
+        <Home
+          className={`h-6 w-6 ${isActive("/home") ? "text-blue-600" : "text-black fill-black"}`}
+        />
+        <p className={`${isActive("/home") ? "text-blue-600" : "text-black"}`}>Home</p>
+      </button>
+
+      {/* EXPLORE */}
+      <button className="flex flex-col justify-center items-center">
+        <Users
+          className={`h-6 w-6 ${isActive("/explore") ? "text-blue-600" : "text-black fill-black"}`}
+        />
+        <p className={`${isActive("/explore") ? "text-blue-600" : "text-black"}`}>Explore</p>
+      </button>
+
+      {/* ROOMS */}
+      <button className="flex flex-col justify-center items-center">
+        <LayoutDashboard
+          className={`h-6 w-6 ${isActive("/rooms") ? "text-blue-600" : "text-black fill-black"}`}
+        />
+        <p className={`${isActive("/rooms") ? "text-blue-600" : "text-black"}`}>Rooms</p>
+      </button>
+
+      {/* NOTIFICATIONS */}
+      <button className="flex flex-col justify-center items-center">
+        <Bell
+          className={`h-6 w-6 ${isActive("/notifications") ? "text-blue-600" : "text-black fill-black"}`}
+        />
+        <p className={`${isActive("/notifications") ? "text-blue-600" : "text-black"}`}>
+          Notification
+        </p>
+      </button>
+
+      {/* CHATS */}
+      <button className="flex flex-col justify-center items-center">
+        <MessageSquare
+          className={`h-6 w-6 ${isActive("/chats") ? "text-blue-600" : "text-black fill-black"}`}
+        />
+        <p className={`${isActive("/chats") ? "text-blue-600" : "text-black"}`}>Chats</p>
+      </button>
+    </footer>
+  );
 }
